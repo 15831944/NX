@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FFC696BE-0900-48A5-BF01-DB2F99FE407D}</ProjectGuid>
+    <ProjectGuid>{2BB594D2-4473-4C69-8FD4-3A180F832464}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NX</RootNamespace>
-    <AssemblyName>NX</AssemblyName>
+    <RootNamespace>NX6._0</RootNamespace>
+    <AssemblyName>NX6.0</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,27 +31,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="NXOpen">
-      <HintPath>..\..\BLL\UG\NXOpen.dll</HintPath>
+      <HintPath>..\..\BLL\UG\UG6.0\NXOpen.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="NXOpen.UF">
-      <HintPath>..\..\BLL\UG\NXOpen.UF.dll</HintPath>
+      <HintPath>..\..\BLL\UG\UG6.0\NXOpen.UF.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="NXOpen.Utilities">
-      <HintPath>..\..\BLL\UG\NXOpen.Utilities.dll</HintPath>
+      <HintPath>..\..\BLL\UG\UG6.0\NXOpen.Utilities.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="NXOpenUI">
-      <HintPath>..\..\BLL\UG\NXOpenUI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="PHSnap">
-      <HintPath>..\..\BLL\UG\PHSnap.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="SnapEx">
-      <HintPath>..\..\BLL\UG\SnapEx.dll</HintPath>
+      <HintPath>..\..\BLL\UG\UG6.0\NXOpenUI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -62,8 +54,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="INX.cs" />
+    <Compile Include="NX.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NX\NX.csproj">
+      <Project>{ffc696be-0900-48a5-bf01-db2f99fe407d}</Project>
+      <Name>NX</Name>
+      <Private>False</Private>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
